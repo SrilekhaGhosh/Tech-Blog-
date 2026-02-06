@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* PERFORMANCE: Prevents the browser from rendering cards that are not yet visible */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+
+  /* ACCESSIBILITY: Ensures focus rings are visible for keyboard navigation */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2;
+  }
+}
+
+/* PERFORMANCE: Global fix for Cumulative Layout Shift (CLS) */
+/* This reserves a 16:9 space for your blog images globally */
+.aspect-video-placeholder {
+  aspect-ratio: 16 / 9;
+  background-color: #e5e7eb; /* tailwind gray-200 */
+}

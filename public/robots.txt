@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow private paths
+Disallow: /admin/
+Disallow: /login/
+
+# Sitemap Link
+Sitemap: https://techblog.com/sitemap.xml
